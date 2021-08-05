@@ -22,7 +22,7 @@ function greet(time) {
   }
   return ("Good Afternoon");
 }
-
-function displayMessage(msg){
-document.getElementById("greeting").testcontent = msg;
+let testContent = "TEST"
+function displayMessage(testcontent){
+document.getElementById("greeting").testcontent = testcontent;
 }
