@@ -12,17 +12,21 @@ function handleClick(e) {
 /* Write your implementation of greet() */
 /* Write your implementation of displayMessage() */
 function greet(time) {
-  const hourInString = time.split(':');
-  const hourInInt = parseInt(hourInString, 10);
-  if (hourInInt < 12) {
-    return ("Good Morning");
+  const hourInString = time.split(":");
+  const hoursInInt = parseInt(hourInString,10);
+
+  if (hoursInInt < 12) {
+    return ('Good Morning');
   }
-  else if(hourInInt > 17) {
-    return ("Good Evening");
+  else if (hoursInInt >=12 && hoursInInt <= 17){
+    return ('Good Afternoon');
   }
-  return ("Good Afternoon");
+  else {
+  return ('Good Evening');
+  }
 }
-let testContent = "TEST"
-function displayMessage(testcontent){
-document.getElementById("greeting").testcontent = testcontent;
+function displayMessage(TEST) {
+  const element = document.getElementById("greeting");
+  element.innerText = TEST;
+  return TEST;
 }
